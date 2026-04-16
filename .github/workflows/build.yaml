@@ -1,4 +1,4 @@
-name: Build Jenkins Agent Image
+name: Build Jenkins plugins Image
 
 on:
   push:
@@ -28,4 +28,4 @@ jobs:
         with:
           push: true
           no-cache: true
-          tags: ghcr.io/sandip84/buildah-agent-tools.git:${{ github.ref_name }}
+          tags: ghcr.io/sandip84/jenkins-plugins.git:${{ github.ref_name }}
