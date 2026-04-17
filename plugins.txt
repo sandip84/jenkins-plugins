@@ -1,4 +1,4 @@
 kubernetes
 git
 configuration-as-code
-nexus
+nexus-artifact-uploader
