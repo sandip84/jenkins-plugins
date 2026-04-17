@@ -1,4 +1,4 @@
 kubernetes
 git
 configuration-as-code
-maven:3.27
+nexus
