@@ -1,3 +1,2 @@
-kubernetes
 git
 configuration-as-code
