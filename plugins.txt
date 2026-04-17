@@ -1,4 +1,4 @@
-kubernete
+Kubernetes
 git
 configuration-as-code
 maven
