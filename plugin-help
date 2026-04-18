@@ -1,0 +1,2 @@
+Here i am building docker image to load required jenkins plugins from plugins.txt
+And then referrencing the image with tag in jenkins/eks/jenkins/jenkins.tf
