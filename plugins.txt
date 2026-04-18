@@ -14,7 +14,6 @@ timestamper
 ws-cleanup
 antisamy-markup-formatter
 email-ext
-mailer
 build-timeout
 durable-task
 workflow-job
