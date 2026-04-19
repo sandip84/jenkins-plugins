@@ -1,0 +1,36 @@
+jobs:
+  - script: >
+      multibranchPipelineJob('simple-java-app') {
+        displayName('simple-java-app')
+
+        branchSources {
+          branchSource {
+            source {
+              github {
+                id('simple-java-app')
+                repoOwner('sandip84')
+                repository('simple-java-maven-app')
+                credentialsId('github-token')
+
+                // Build PRs only
+                buildOriginBranch(false)
+                buildOriginBranchWithPR(false)
+                buildOriginPRMerge(true)
+                buildOriginPRHead(true)
+              }
+            }
+          }
+        }
+
+        orphanedItemStrategy {
+          discardOldItems {
+            numToKeep(10)
+          }
+        }
+
+        triggers {
+          periodicFolderTrigger {
+            interval('1d')
+          }
+        }
+      }

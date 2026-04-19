@@ -1,0 +1,24 @@
+jobs:
+  - script: >
+      pipelineJob('test-jcac') {
+        description('Pipeline job for test-jcasc')
+
+        triggers {
+          githubPush()
+        }
+
+        definition {
+          cpsScm {
+            scm {
+              git {
+                remote {
+                  url('https://github.com/sandip84/simple-java-maven-app.git')
+                }
+                branches('*/sandy')
+              }
+            }
+            scriptPath('Jenkinsfile')
+            lightweight(true)
+          }
+        }
+      }
