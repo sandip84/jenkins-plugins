@@ -10,7 +10,7 @@ jobs:
                 id('simple-java-app')
                 repoOwner('sandip84')
                 repository('simple-java-maven-app')
-                credentialsId('github-token')
+                //credentialsId('github-token')
 
                 // Build PRs only
                 buildOriginBranch(false)
