@@ -10,13 +10,9 @@ jobs:
                 id('simple-java-app')
                 repoOwner('sandip84')
                 repository('simple-java-maven-app')
-<<<<<<< HEAD
-                //credentialsId('github-token')
-=======
                 repositoryUrl('https://github.com/sandip84/simple-java-maven-app.git')
                 configuredByUrl(true)
-                # credentialsId('github-token')
->>>>>>> 9b8df9c (added jcasc folder)
+                //credentialsId('github-token')
 
                 // Build PRs only
                 buildOriginBranch(false)
