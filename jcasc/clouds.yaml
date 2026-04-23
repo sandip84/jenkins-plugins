@@ -1,0 +1,22 @@
+jenkins:
+  clouds:
+    - kubernetes:
+        name: "kubernetes"
+        namespace: "jenkins"
+        serverUrl: "https://kubernetes.default"
+
+        jenkinsUrl: "http://jenkins.jenkins.svc.cluster.local:8080"
+        jenkinsTunnel: "jenkins-agent.jenkins.svc.cluster.local:50000"
+
+        containerCapStr: "10"
+
+        templates:
+          - name: "default"
+            label: "jenkins-agent"
+            namespace: "jenkins"
+
+            containers:
+              - name: "jnlp"
+                image: "jenkins/inbound-agent:3355.v388858a_47b_33-19"
+                args: "^${computer.jnlpmac} ^${computer.name}"
+                workingDir: "/home/jenkins/agent"

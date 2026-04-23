@@ -1,0 +1,32 @@
+jenkins:
+  systemMessage: "Jenkins managed by JCasC"
+
+  numExecutors: 0
+  mode: NORMAL
+
+  securityRealm:
+    local:
+      allowsSignup: false
+      users:
+        - id: admin
+          password: ${JENKINS_ADMIN_PASSWORD}
+
+  authorizationStrategy:
+    loggedInUsersCanDoAnything:
+      allowAnonymousRead: false
+
+  crumbIssuer: standard
+
+unclassified:
+  location:
+    url: "http://jenkins.local/"
+    adminAddress: "admin@company.com"
+
+  gitHubPluginConfig:
+    hookUrl: "http://jenkins.local/github-webhook/"
+
+tool:
+  git:
+    installations:
+      - name: "Default"
+        home: "git"

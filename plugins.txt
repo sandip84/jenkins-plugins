@@ -1,35 +1,29 @@
-configuration-as-code
-kubernetes
+# --- CORE PIPELINE ---
 workflow-aggregator
+pipeline-model-definition
+
+# --- SCM ---
 git
+github-branch-source
+
+# --- KUBERNETES ---
+kubernetes
+
+# --- CONFIG ---
+configuration-as-code
+
+# --- CREDENTIALS ---
 credentials
 credentials-binding
 plain-credentials
-ssh-credentials
+
+# --- SECURITY ---
 matrix-auth
-role-strategy
-blueocean
-pipeline-stage-view
+
+# --- UTILITIES ---
 timestamper
 ws-cleanup
-antisamy-markup-formatter
-email-ext
 build-timeout
-durable-task
-workflow-job
-workflow-cps
-workflow-step-api
-workflow-basic-steps
-workflow-durable-task-step
-pipeline-model-definition
-pipeline-model-api
-pipeline-model-extensions
-scm-api
-github
-github-api
-branch-api
-git-client
-script-security
-structs
-cloudbees-folder
-job-dsl
+
+# --- OPTIONAL (KEEP ONLY ONE UI) ---
+pipeline-stage-view
